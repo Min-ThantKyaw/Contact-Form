@@ -26,7 +26,7 @@ A simple PHP contact form with email functionality using sessions for message ha
 
 2. **Access the form:**
    ```
-   http://localhost:8000/contact
+   http://localhost:8000
    ```
 
 ## Email Configuration
