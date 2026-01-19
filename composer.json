@@ -1,0 +1,6 @@
+{
+    "name": "min-thant-kyaw/contact",
+    "require": {
+        "phpmailer/phpmailer": "^7.0"
+    }
+}
