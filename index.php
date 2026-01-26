@@ -6,7 +6,7 @@ if(isset($_SESSION['message'])) {
     unset($_SESSION['message']); // Clear message after displaying
 }
 ?>
-<!DOCTYPE html>>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -40,7 +40,7 @@ if(isset($_SESSION['message'])) {
                         </div>
                         <div>
                             <p class="text-sm font-semibold uppercase tracking-wider opacity-70">Email</p>
-                            <p class="text-lg">hello@example.com</p>
+                            <p class="text-lg">minthant1590@gmail.com</p>
                         </div>
                     </div>
                     
@@ -50,7 +50,7 @@ if(isset($_SESSION['message'])) {
                         </div>
                         <div>
                             <p class="text-sm font-semibold uppercase tracking-wider opacity-70">Phone</p>
-                            <p class="text-lg">+1 (555) 000-0000</p>
+                            <p class="text-lg">+959969301467</p>
                         </div>
                     </div>
 
@@ -59,17 +59,17 @@ if(isset($_SESSION['message'])) {
                             <i class="fas fa-location-dot text-white"></i>
                         </div>
                         <div>
-                            <p class="text-sm font-semibold uppercase tracking-wider opacity-70">Office</p>
-                            <p class="text-lg">123 Design St, New York, NY</p>
+                            <p class="text-sm font-semibold uppercase tracking-wider opacity-70">Address</p>
+                            <p class="text-lg">Yangon, Myanmar</p>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="flex space-x-4 mt-12">
-                <a href="#" class="hover:text-indigo-200 transition-colors"><i class="fab fa-twitter text-xl"></i></a>
-                <a href="#" class="hover:text-indigo-200 transition-colors"><i class="fab fa-linkedin text-xl"></i></a>
-                <a href="#" class="hover:text-indigo-200 transition-colors"><i class="fab fa-github text-xl"></i></a>
+                <!-- <a href="#" target="_blank" class="hover:text-indigo-200 transition-colors"><i class="fab fa-twitter text-xl"></i></a> -->
+                <a href="https://www.linkedin.com/in/min-thant-kyaw-7a042b284/" target="_blank" class="hover:text-indigo-200 transition-colors"><i class="fab fa-linkedin text-xl"></i></a>
+                <a href="https://github.com/Min-ThantKyaw" target="_blank" class="hover:text-indigo-200 transition-colors"><i class="fab fa-github text-xl"></i></a>
             </div>
         </div>
 

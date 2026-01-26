@@ -1,11 +1,8 @@
 <?php
 session_start();
-require 'PHPMailer/src/Exception.php';
-require 'PHPMailer/src/PHPMailer.php';
-require 'PHPMailer/src/SMTP.php';
+require 'vendor/autoload.php';
 
 use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
 	if($_SERVER['REQUEST_METHOD'] == "POST") {
@@ -19,13 +16,8 @@ use PHPMailer\PHPMailer\Exception;
 		
 		try {
 			$mail->isSMTP();
-			$mail->Host = 'smtp.gmail.com';
-			$mail->SMTPAuth = true;
-			$mail->Username = 'minthant1590@gmail.com';
-			$mail->Password = '';
-			$mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-			$mail->Port = 587;
-			
+			$mail->Host = 'localhost';
+			$mail->Port = 1025;
 			$mail->setFrom($email, $firstName . ' ' . $lastName);
 			$mail->addAddress('minthant1590@gmail.com');
 			
