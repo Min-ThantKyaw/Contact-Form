@@ -1,67 +1,54 @@
 # Contact Form Project
 
-A simple PHP contact form with email functionality using sessions for message handling.
+A simple PHP contact form with email functionality.
 
 ## Features
 
-- Responsive contact form with Tailwind CSS
+- Responsive design with Tailwind CSS
 - Form validation
-- Email sending capability
-- Success/error message display using PHP sessions
-- Clean, modern UI design
+- Email sending
+- Session-based messaging
 
 ## Files
 
-- `index.php` - Main contact form page
-- `contact.php` - Form processing and email handling
-- `README.md` - This file
+- `index.php` - Contact form
+- `contact.php` - Form handler
+- `README.md` - Documentation
 
 ## Setup
 
-1. **Basic Setup:**
-   ```bash
-   # Start PHP development server
-   php -S localhost:8000
-   ```
+```bash
+php -S localhost:8000
+```
 
-2. **Access the form:**
-   ```
-   http://localhost:8000
-   ```
+Access: http://localhost:8000
 
 ## Email Configuration
 
-### Option 1: PHPMailer (Recommended)
-1. Download PHPMailer from https://github.com/PHPMailer/PHPMailer
-2. Extract to `PHPMailer/` folder in project directory
-3. Update `contact.php` with your Gmail credentials:
-   ```php
-   $mail->Username = 'your-email@gmail.com';
-   $mail->Password = 'your-app-password';
+**Mailpit (Development):**
+1. Start Mailpit:
+   ```bash
+   docker-compose -f MailpitDocker/docker-compose.yml up -d
    ```
-4. Generate Gmail App Password:
-   - Enable 2FA in Google Account
-   - Create App Password for this application
+2. Configure PHP to use Mailpit SMTP:
+   - Host: localhost
+   - Port: 1025
+   - No authentication required
+3. View emails: http://localhost:8025
 
-### Option 2: Built-in mail() function
-- Configure local mail server (sendmail/postfix)
-- Update `php.ini` SMTP settings
-
-## Usage
-
-1. Fill out the contact form
-2. Submit the form
-3. View success/error message
-4. Check your email for the message
+**PHPMailer (Production):**
+1. Download: https://github.com/PHPMailer/PHPMailer
+2. Extract to `PHPMailer/` folder
+3. Update credentials in `contact.php`
+4. Use Gmail App Password (requires 2FA)
 
 ## Requirements
 
 - PHP 7.0+
-- Web server (Apache/Nginx) or PHP built-in server
-- Mail server configuration (for email functionality)
+- Mail server or PHPMailer
 
 ## Troubleshooting
 
-- **"Error! Failed to send email"** - Mail server not configured
-- **Form not submitting** - Check file paths and permissions
-- **No email received** - Verify SMTP settings and credentials
+- Email not sending → Check SMTP configuration
+- Form errors → Verify file permissions
+- No email received → Check credentials

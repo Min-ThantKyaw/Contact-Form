@@ -1,0 +1,17 @@
+services:
+  mailpit:
+    image: axllent/mailpit
+    container_name: mailpit
+    ports:
+      - "8025:8025"
+      - "1025:1025"
+    environment:
+      - MP_DATABASE=/data/mailpit.db
+      - MP_UI_AUTH_FILE=/data/authfile
+      - TZ=Europe/London
+    volumes:
+      - mailpit_data:/data
+    restart: unless-stopped
+
+volumes:
+  mailpit_data:
